@@ -8,7 +8,6 @@ export default function Header() {
   const navigate = useNavigate();
   const dropdownRef = useRef();
 
-  // Check login status
   useEffect(() => {
     const checkLogin = () => {
       const loginStatus = localStorage.getItem("isLogin");
@@ -29,9 +28,8 @@ export default function Header() {
     return () => {
       window.removeEventListener("storage", checkLogin);
     };
-  }, []);
+  }, );
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {

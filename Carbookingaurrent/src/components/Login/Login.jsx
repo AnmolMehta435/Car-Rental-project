@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate,useLocation, Link } from "react-router-dom";
 
 function Login() {
   const navigate = useNavigate();
+
+  const location = useLocation();
+const from = location.state?.from?.pathname || "/";
 
   const [formData, setFormData] = useState({
     email: "",
@@ -37,17 +40,17 @@ function Login() {
   };
 
   const handleLogin = () => {
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-      return; 
-    }
+  const validationErrors = validate();
+  if (Object.keys(validationErrors).length > 0) {
+    setErrors(validationErrors);
+    return;
+  }
 
-    localStorage.setItem("isLogin", "true");
-    localStorage.setItem("userEmail", formData.email);
+  localStorage.setItem("isLogin", "true");
+  localStorage.setItem("userEmail", formData.email);
 
-    navigate("/Mohali");
-  };
+  navigate(from, { replace: true });
+};
 
   return (
     <div className="img">

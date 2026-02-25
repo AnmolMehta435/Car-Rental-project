@@ -3,12 +3,11 @@ import ReactDom from 'react-dom/client'
 import { createBrowserRouter,  createRoutesFromElements, Route, Router, RouterProvider } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import Home from "./components/Home/Home.jsx";
-import Login from "./components/login/login.jsx";
+import Login from "./components/Login/Login.jsx";
 import Create from "./components/Create/Create.jsx";
 import Cars from "./components/Footer/Cars.jsx";
 import Premium from "./components/Footer/Premium.jsx";
 import Electric from"./components/Footer/Electric .jsx";
-import Vans from "./components/Footer/Vans.jsx";
 import Mohali from "./components/Home/Mohali.jsx";
 import Chandigarh from "./components/Home/Chandigarh.jsx";
 import Kharar from  "./components/Home/Kharar.jsx";
@@ -20,18 +19,18 @@ import Car_details3 from"./components/CarDetials/Car_details3.jsx"
 import Car_details4 from"./components/CarDetials/Car_details4.jsx";
 import Car_details5 from"./components/CarDetials/Car_details5.jsx";
 import Confirm_booking from "./components/CarDetials/Confirm_booking.jsx";
+import ProtectedRoute from "./components/ProtectedRouter.jsx";
 const router =createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout/>}>
     <Route path="" element={<Home/>}/>
-    <Route path="Cars" element={<Cars/>}/>
-<Route path="Premium" element={<Premium/>}/>
-    <Route  path="Electric" element={<Electric/>}/>
-    <Route path="Mohali" element={<Mohali/>}/>
-    <Route  path="Chandigarh" element={<Chandigarh/>}/>
-    <Route  path="Kharar" element={<Kharar/>}/>
-    <Route path="Delhi" element={< Delhi/>}/>
-    <Route  path="Vans" element={< Vans/>}/>
+    <Route path="Cars" element={<ProtectedRoute><Cars/></ProtectedRoute>}/>
+<Route path="Premium" element={<ProtectedRoute><Premium/></ProtectedRoute>}/>
+    <Route  path="Electric" element={<ProtectedRoute><Electric/></ProtectedRoute>}/>
+    <Route path="Mohali" element={ <ProtectedRoute><Mohali/></ProtectedRoute>}/>
+    <Route  path="Chandigarh" element={<ProtectedRoute><Chandigarh/></ProtectedRoute>}/>
+    <Route  path="Kharar" element={<ProtectedRoute><Kharar/></ProtectedRoute>}/>
+    <Route path="Delhi" element={<ProtectedRoute><Delhi/></ProtectedRoute>}/>
     <Route path="Login"  element={<Login/>}/>
     <Route path="Create" element={<Create/>}/>
   <Route  path="/Car_details/:id" element={<Car_details/>}/>
