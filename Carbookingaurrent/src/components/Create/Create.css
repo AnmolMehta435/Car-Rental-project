@@ -1,0 +1,80 @@
+.create-img {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+.create {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  color: #fff;
+  animation: fadeIn 0.6s ease-in-out;
+}
+.create-inf {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.name {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.text-add {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.text-add::placeholder {
+  color: #ddd;
+}
+
+.text-add:focus {
+  background: rgba(255,255,255,0.3);
+  box-shadow: 0 0 8px #00c6ff;
+  transform: scale(1.02);
+}
+.Create {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.Create:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 114, 255, 0.4);
+}
+
+.Create:active {
+  transform: scale(0.98);
+}
+
+
