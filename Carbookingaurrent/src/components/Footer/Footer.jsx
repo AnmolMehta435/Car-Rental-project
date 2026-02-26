@@ -4,8 +4,15 @@ const Footer = () => {
   const navigate = useNavigate();
   
   const data = [
+
+     {
+      title: "Cars ",
+      desc: "All cars ,Electric car ,Premium car ",
+      img: "/assets/pexels-egeardaphotos-2148533277-32729922.jpg",
+      type: "All_Cars",
+    },
     {
-      title: "Car",
+      title: "City Car",
       desc: "Compact and fuel-efficient city cars",
       img: "/assets/laurapuig4-taxi-988348_1920.jpg",
       type: "cars",
@@ -22,12 +29,7 @@ const Footer = () => {
       img: "/assets/andreas160578-electric-car-4381728_1920.jpg",
       type: "electric",
     },
-    // {
-    //   title: "Vans ",
-    //   desc: "SUVs and vans for business or leisure",
-    //   img: "/assets/james163-ai-generated-8241739_1920.jpg",
-    //   type: "vans",
-    // },
+   
   ];
  
   return (
@@ -88,86 +90,98 @@ const Footer = () => {
           ))}
         </div>
       </section>
-      <footer className="footer">
-        <div className="footer-top">
-          <div className="feature">
-            <h3>India’s #1</h3>
-            <p>Largest Auto portal</p>
-          </div>
+     
+   <footer className="footer">
 
-          <div className="feature">
-            <h3>AI Expert</h3>
-            <p>Simplify your car search</p>
-          </div>
+  {/* Top Highlights */}
+  <div className="footer-top">
+    <div className="feature">
+      <h3>🚗 500+ Cars</h3>
+      <p>Economy to Luxury vehicles available</p>
+    </div>
 
-          <div className="feature">
-            <h3>Offers</h3>
-            <p>Stay updated pay less</p>
-          </div>
+    <div className="feature">
+      <h3>🛡 Fully Insured</h3>
+      <p>Safe & secure rides guaranteed</p>
+    </div>
 
-          <div className="feature">
-            <h3>Compare</h3>
-            <p>Decode the right car</p>
-          </div>
-        </div>
+    <div className="feature">
+      <h3>⏱ Instant Booking</h3>
+      <p>Book your car in under 2 minutes</p>
+    </div>
 
-        <div className="footer-main">
+    <div className="feature">
+      <h3>📞 24/7 Support</h3>
+      <p>Customer support anytime, anywhere</p>
+    </div>
+  </div>
 
-          <div className="footer-column">
-            <h4>ABOUT CARDEKHO</h4>
-            <ul>
-              <li>About</li>
-              <li>Careers With Us</li>
-              <li>Terms & Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Corporate Policies</li>
-              <li>Investors</li>
-              <li>FAQs</li>
-            </ul>
-          </div>
 
-          <div className="footer-column">
-            <h4>CONNECT WITH US</h4>
-            <ul>
-              <li>Feedback</li>
-              <li>Contact Us</li>
-              <li>Advertise with Us</li>
-              <li>Become Partner Dealer</li>
-            </ul>
-          </div>
+  {/* Main Footer Content */}
+  <div className="footer-main">
 
-          <div className="footer-column">
-            <h4>OTHERS</h4>
-            <ul>
-              <li>TrucksDekho</li>
-              <li>TyreDekho</li>
-              <li>TractorsDekho</li>
-              <li>Emergency Response</li>
-              <li>Car Sales Trends</li>
-            </ul>
-          </div>
+    <div className="footer-column">
+      <h4>COMPANY</h4>
+      <ul>
+        <li>About Us</li>
+        <li>Our Fleet</li>
+        <li>Careers</li>
+        <li>Testimonials</li>
+        <li>Blog</li>
+      </ul>
+    </div>
 
-          <div className="footer-column">
-            <h4>EXPERIENCE CARDEKHO APP</h4>
-            <div className="app-buttons">
-              <button>App Store</button>
-              <button>Google Play</button>
-            </div>
-          </div>
+    <div className="footer-column">
+      <h4>RENTAL SERVICES</h4>
+      <ul>
+        <li>Self Drive Cars</li>
+        <li>Luxury Rentals</li>
+        <li>Long Term Leasing</li>
+        <li>Corporate Rentals</li>
+        <li>Airport Pickup</li>
+      </ul>
+    </div>
 
-        </div>
+    <div className="footer-column">
+      <h4>SUPPORT</h4>
+      <ul>
+        <li>Help Center</li>
+        <li>Cancellation Policy</li>
+        <li>Refund Policy</li>
+        <li>Terms & Conditions</li>
+        <li>Privacy Policy</li>
+      </ul>
+    </div>
 
-        <div className="footer-bottom">
-          <p>© 2026 Girnar Software Pvt. Ltd.</p>
-          <div className="social">
-            <span>Facebook</span>
-            <span>Twitter</span>
-            <span>YouTube</span>
-            <span>Instagram</span>
-          </div>
-        </div>
+    <div className="footer-column">
+      <h4>CONTACT US</h4>
+      <ul>
+        <li>📍 Mohali, Punjab</li>
+        <li>📧 support@quickride.com</li>
+        <li>📱 +91 98765 43210</li>
+      </ul>
 
-      </footer>
+      <div className="app-buttons">
+        <button>Download App</button>
+      </div>
+    </div>
+
+  </div>
+
+
+  {/* Bottom Section */}
+  <div className="footer-bottom">
+    <p>© 2026 QuickRide Car Rental. All rights reserved.</p>
+
+    <div className="social">
+      <span>Facebook</span>
+      <span>Instagram</span>
+      <span>Twitter</span>
+      <span>LinkedIn</span>
+    </div>
+  </div>
+
+</footer>
     </>
   );
 };

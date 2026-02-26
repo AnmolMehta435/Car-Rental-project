@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
-import cars from "../Home/carsdata4.jsx";
+import React, { useState, } from "react";
+import {  useNavigate, useParams, useLocation } from "react-router-dom";
+import cars from "../Footer/AllCarsDate";
 import "./car.css";
 import {
   FaChevronLeft,
@@ -11,14 +11,18 @@ import {
 } from "react-icons/fa";
 
 export default function CarDetails() {
+
   const { id } = useParams();
-  const navigate = useNavigate();
   const location = useLocation();
+  const navigate = useNavigate();
+
 
   const hours = location.state?.hours || 1;
+
   const car = cars.find((c) => c.id === Number(id));
   const [current, setCurrent] = useState(0);
   const [showMore, setShowMore] = useState(false);
+
   if (!car) {
     return <h2 style={{ textAlign: "center" }}>Car Not Found</h2>;
   }
@@ -39,8 +43,6 @@ export default function CarDetails() {
     "2 Side Airbags",
     "Power Windows",
   ];
-
-
   const isLogin = localStorage.getItem("isLogin") === "true";
   return (
     <div className="container">
@@ -136,6 +138,7 @@ export default function CarDetails() {
             >
               {isLogin ? "CONFIRM BOOKING" : "LOGIN TO CONTINUE"}
             </button>
+
           </div>
         </div>
       </div>

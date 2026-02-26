@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, useParams,useNavigate } from "react-router-dom";
-import Electric  from "../Footer/carsdate6";
+import { Link, useParams, useNavigate, useLocation } from "react-router-dom";
+import Electric from "../Footer/carsdate6";
 import "./car.css";
 import {
   FaChevronLeft,
@@ -12,11 +12,12 @@ import {
 
 export default function CarDetails() {
   const { id } = useParams();
-   const navigate =useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-   const hours=location.state?.hours||1;
+  const hours = location.state?.hours || 1;
 
-  const car = Electric .find((c) => c.id === Number(id));
+  const car = Electric.find((c) => c.id === Number(id));
   const [current, setCurrent] = useState(0);
   const [showMore, setShowMore] = useState(false);
   if (!car) {
@@ -39,17 +40,6 @@ export default function CarDetails() {
     "2 Side Airbags",
     "Power Windows",
   ];
-const handleConfirmBooking = () => {
-    navigate("/Confirm_booking", {
-      state: {
-        carPrice: car.price,   
-        carName: car.name,     
-        ...location.state,    
-      },
-    });
-  };
-
-
   const isLogin = localStorage.getItem("isLogin") === "true";
   return (
     <div className="container">
@@ -124,18 +114,27 @@ const handleConfirmBooking = () => {
           </div>
           <div className="total">
             <h3>Total Price</h3>
-            <h2>₹{car.price *hours }</h2>
-            <p>({hours} {hours > 1 ? "hours" : "hour"} × ₹{car.price})</p>
-
-            {isLogin ? (
-              <Link to="/Confirm_booking">
-                            <button className="butto" onClick={handleConfirmBooking}> CONFIRM BOOKING</button>
-                            </Link>
-            ) : (
-              <Link to="/Login">
-                <button className="butto">LOGIN TO CONTINUE</button>
-              </Link>
-            )}
+            <h2>₹{car.price * hours}</h2>
+            <p>({hours} {hours > 1 ? "hours" : "hour"} * ₹{car.price}/hr)</p>
+            <button
+              className="butto"
+              onClick={() => {
+                if (!isLogin) {
+                  navigate("/login", { state: { from: location } });
+                } else {
+                  navigate("/Confirm_booking", {
+                    state: {
+                      carPrice: car.price,
+                      carName: car.name,
+                      totalPrice: car.price * hours,
+                      ...location.state,
+                    },
+                  });
+                }
+              }}
+            >
+              {isLogin ? "CONFIRM BOOKING" : "LOGIN TO CONTINUE"}
+            </button>
           </div>
         </div>
       </div>
