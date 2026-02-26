@@ -5,7 +5,7 @@ import Layout from "./Layout.jsx";
 import Home from "./components/Home/Home.jsx";
 import Login from "./components/Login/Login.jsx";
 import Create from "./components/Create/Create.jsx";
-import All_cars from "./components/Footer/all_cars.jsx";
+// import All_cars from"./components/Footer/all_cars.jsx"
 import Cars from "./components/Footer/Cars.jsx";
 import Premium from "./components/Footer/Premium.jsx";
 import Electric from"./components/Footer/Electric .jsx";
@@ -26,7 +26,7 @@ const router =createBrowserRouter(
   createRoutesFromElements(
    <Route path="/" element={<Layout/>}>
   <Route index element={<Home/>}/>
-  <Route path="All_cars" element={<All_cars/>}/>
+  {/* <Route path="all_cars" element={<all_cars/>}/> */}
   <Route path="Cars" element={<Cars/>}/>
   <Route path="Premium" element={<Premium/>}/>
   <Route path="Electric" element={<Electric/>}/>
