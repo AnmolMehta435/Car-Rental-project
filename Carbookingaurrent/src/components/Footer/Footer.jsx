@@ -9,7 +9,7 @@ const Footer = () => {
       title: "Cars ",
       desc: "All cars ,Electric car ,Premium car ",
       img: "/assets/pexels-egeardaphotos-2148533277-32729922.jpg",
-      type: "All_Cars",
+      type: "Allcars",
     },
     {
       title: "City Car",

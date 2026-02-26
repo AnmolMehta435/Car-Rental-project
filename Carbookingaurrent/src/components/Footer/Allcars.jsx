@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {  useNavigate } from "react-router-dom";
-import cars from "./AllCarsDate";
+import cars from "../Footer/AllCarsDate";
 import "./Cars.css";
 
 export default function CarsPage() {

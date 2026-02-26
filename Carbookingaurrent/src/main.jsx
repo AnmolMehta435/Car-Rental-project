@@ -1,11 +1,11 @@
 import React from "react";
-import ReactDom from 'react-dom/client'
+import ReactDom from 'react-dom/client';
 import { createBrowserRouter,  createRoutesFromElements, Route, Router, RouterProvider } from "react-router-dom";
 import Layout from "./Layout.jsx";
 import Home from "./components/Home/Home.jsx";
 import Login from "./components/Login/Login.jsx";
 import Create from "./components/Create/Create.jsx";
-// import All_cars from"./components/Footer/all_cars.jsx"
+import Allcars from"./components/Footer/Allcars.jsx";
 import Cars from "./components/Footer/Cars.jsx";
 import Premium from "./components/Footer/Premium.jsx";
 import Electric from"./components/Footer/Electric .jsx";
@@ -19,14 +19,14 @@ import Car_details2 from"./components/CarDetials/Car_details2.jsx"
 import Car_details3 from"./components/CarDetials/Car_details3.jsx"
 import Car_details4 from"./components/CarDetials/Car_details4.jsx";
 import Car_details5 from"./components/CarDetials/Car_details5.jsx";
-import Car_details6 from "./components/CarDetials/Car_details6.jsx"
+import Car_details6 from "./components/CarDetials/Car_details6.jsx";
 import Confirm_booking from "./components/CarDetials/Confirm_booking.jsx";
 import ProtectedRoute from "./components/ProtectedRouter.jsx";
 const router =createBrowserRouter(
   createRoutesFromElements(
    <Route path="/" element={<Layout/>}>
-  <Route index element={<Home/>}/>
-  {/* <Route path="all_cars" element={<all_cars/>}/> */}
+  <Route  path="" element={<Home/>}/>
+  <Route path="Allcars" element={<Allcars/>}/>
   <Route path="Cars" element={<Cars/>}/>
   <Route path="Premium" element={<Premium/>}/>
   <Route path="Electric" element={<Electric/>}/>
