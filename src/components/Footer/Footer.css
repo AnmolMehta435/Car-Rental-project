@@ -1,0 +1,228 @@
+
+.how {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #f8f9fa, #eef2f3);
+}
+
+.how-sub {
+  color: #888;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.how-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+.how-title span {
+  color: #ff4d30;
+}
+
+.how-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.step {
+  position: relative;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-30px);
+}
+
+.img-box {
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img-a {
+  width: 80px;
+}
+
+.dot {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: #be2e14;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.line {
+  width: 80px;
+  height: 2px;
+  background: #ddd;
+}
+.fleet {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.fleet h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: gray;
+  margin-bottom: 50px;
+}
+
+.fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.fleet-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+}
+
+.fleet-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.fleet-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.fleet-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.fleet-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff4d30, #ff7a18);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.fleet-card button:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.fleet-card img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+.footer {
+  background: #111;
+  color: #fff;
+  padding-top: 60px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 40px 20px;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.feature h3 {
+  color: #ff4d30;
+  margin-bottom: 10px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 60px 20px;
+  gap: 40px;
+}
+
+.footer-column h4 {
+  margin-bottom: 20px;
+  color: #ff4d30;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer-column ul li:hover {
+  color: #ff4d30;
+  padding-left: 5px;
+}
+
+.app-buttons button {
+  padding: 10px 18px;
+  margin-right: 10px;
+  margin-top: 10px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(45deg, #ff4d30, #ff7a18);
+  color: white;
+  transition: 0.3s;
+}
+
+.app-buttons button:hover {
+  transform: scale(1.05);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.social span {
+  margin: 0 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.social span:hover {
+  color: #ff4d30;
+}
